@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Thubelihle Lindani Dlamini</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals, Thubelihle Lindani Dlamini, coursework landing page showcasing web development resources and personal background profiles.">
+    <meta name="author" content="Thubelihle Lindani Dlamini">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    
+    <!-- External JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    </header>
+    
+    <nav class="navigation">
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+        <a href="#">Final Project</a>
+    </nav>
+
+    <main>
+        <h1 class="user-name">Thubelihle Lindani Dlamini</h1>
+        
+        <div class="grid-container">
+            <!-- Left Card: About Me -->
+            <section class="card">
+                <div class="card-header">About Me</div>
+                <div class="card-body">
+                    <div class="about-top">
+                        <p>My name is Thube. I am currently working as a Pricing Analyst. I am passionate about quantitative analysis and dynamic web environments. I love learning new things and improving my skills daily.</p>
+                        <img src="images/profile.webp" alt="Thubelihle Lindani Dlamini Profile Picture" class="profile-img" width="150" height="200">
+                    </div>
+                    
+                    <div class="location-section">
+                        <hr>
+                        <h3>Manzini, Eswatini</h3>
+                        <hr>
+                        <div class="location-details">
+                            <div class="flag-container">
+                                <img src="images/flag.webp" alt="Official Flag of Eswatini" class="flag-img">
+                                <span class="flag-caption">Official Flag of Eswatini</span>
+                            </div>
+                            <p>Eswatini is a landlocked country in Southern Africa. It is known for its rich culture, beautiful landscapes, and diverse wildlife reserves. The city of Manzini serves as a vibrant hub of commercial activity.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Right Card: Web Dev Resources -->
+            <section class="card">
+                <div class="card-header">Web Dev Resources</div>
+                <div class="card-body resources-body">
+                    <ul>
+                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🧑🏻‍💻 Thubelihle Lindani Dlamini 🧑🏻‍💻 Eswatini</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

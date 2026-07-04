@@ -1,0 +1,192 @@
+/* Base Setup */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6fa;
+    color: #2f3640;
+}
+
+/* Header Styling (Top Blue Bar) */
+header {
+    background-color: #1b5a7a;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Menu (Dark Gray Bar Below Header) */
+.navigation {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.25rem 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navigation a:hover {
+    background-color: #1b5a7a;
+    border-radius: 4px;
+}
+
+/* Main Content Constraints */
+main {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.user-name {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #1c2833;
+    font-weight: 400;
+}
+
+/* Grid Layout matching image_75b4e3.png */
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Structural Card Formats */
+.card {
+    background: #fff;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    background-color: #1b5a7a;
+    color: #fff;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Internal Layout elements for About Me card */
+.about-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.about-top p {
+    margin-top: 0;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.profile-img {
+    border: 1px solid #bdc3c7;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.location-section h3 {
+    text-align: center;
+    margin: 0.7rem 0;
+    color: #2c3e50;
+}
+
+.location-section hr {
+    border: 0;
+    height: 1px;
+    background: #bdc3c7;
+}
+
+.location-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.location-details p {
+    line-height: 1.6;
+    flex: 2;
+}
+
+.flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.flag-img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #cbd5e1;
+}
+
+.flag-caption {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #57606f;
+}
+
+/* Resources List Panel */
+.resources-body ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.resources-body li {
+    margin-bottom: 0.75rem;
+}
+
+.resources-body a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+/* Footer elements mapping to image_75b4e3.png exactly */
+footer {
+    background-color: #1b5a7a;
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 3rem;
+    font-size: 1.05rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+#lastModified {
+    color: #ffff00;
+    font-size: 0.95rem;
+}
