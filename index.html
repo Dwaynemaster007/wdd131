@@ -21,22 +21,23 @@
 <body>
     <header>
         <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        <!-- FIX: <nav> must be inside the <header> element according to audit -->
+        <nav class="navigation">
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
     </header>
-    
-    <nav class="navigation">
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
-        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
-        <a href="#">Final Project</a>
-    </nav>
 
     <main>
         <h1 class="user-name">Thubelihle Lindani Dlamini</h1>
         
         <div class="grid-container">
             <!-- Left Card: About Me -->
+            <!-- FIX: Section elements require proper top headings; H2 keeps the heading level consecutive -->
             <section class="card">
-                <div class="card-header">About Me</div>
+                <h2 class="card-header">About Me</h2>
                 <div class="card-body">
                     <div class="about-top">
                         <p>My name is Thube. I am currently working as a Pricing Analyst. I am passionate about quantitative analysis and dynamic web environments. I love learning new things and improving my skills daily.</p>
@@ -45,7 +46,8 @@
                     
                     <div class="location-section">
                         <hr>
-                        <h3>Manzini, Eswatini</h3>
+                        <!-- FIX: Changed from H3 to H2 to prevent skipped heading levels (H1 -> H2) -->
+                        <h2>Manzini, Eswatini</h2>
                         <hr>
                         <div class="location-details">
                             <div class="flag-container">
@@ -59,8 +61,9 @@
             </section>
             
             <!-- Right Card: Web Dev Resources -->
+            <!-- FIX: Replaced div with section and added an H2 heading to resolve section lack-of-heading issue -->
             <section class="card">
-                <div class="card-header">Web Dev Resources</div>
+                <h2 class="card-header">Web Dev Resources</h2>
                 <div class="card-body resources-body">
                     <ul>
                         <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
