@@ -47,12 +47,15 @@ header h1 {
 
 nav {
     width: 100%;
+    display: flex;
+    flex-direction: column; 
 }
 
 .navigation {
     list-style: none;
     display: none; 
     flex-direction: column;
+    width: 100%;
 }
 
 .navigation.open {
@@ -142,3 +145,4 @@ footer #lastModified {
     color: #ffffff;
     font-weight: 700;
 }
+
