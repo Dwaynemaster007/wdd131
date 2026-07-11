@@ -1,0 +1,43 @@
+@media only screen and (min-width: 48rem) {
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        text-align: left;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    main h2 {
+        text-align: left;
+        font-size: 1.75rem;
+    }
+}
