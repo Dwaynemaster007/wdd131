@@ -17,23 +17,20 @@ header {
     background-color: #0f172a;
     color: #ffffff;
     position: relative;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
-}
-
-header h1 {
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 #menu {
     position: absolute;
-    top: 1rem;
+    top: 1.25rem;
     right: 1rem;
     background: none;
     border: none;
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.75rem;
     cursor: pointer;
 }
 
@@ -48,14 +45,15 @@ header h1 {
 nav {
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .navigation {
     list-style: none;
-    display: none; 
+    display: none;
     flex-direction: column;
     width: 100%;
+    margin-top: 1rem;
 }
 
 .navigation.open {
@@ -86,9 +84,17 @@ main {
     padding: 1.5rem 1rem;
 }
 
-main h2 {
-    font-size: 1.5rem;
+main h1 {
+    font-size: 2rem;
     text-align: center;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+main h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #475569;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #cbd5e1;
     padding-bottom: 0.5rem;
@@ -96,7 +102,7 @@ main h2 {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
@@ -145,4 +151,3 @@ footer #lastModified {
     color: #ffffff;
     font-weight: 700;
 }
-

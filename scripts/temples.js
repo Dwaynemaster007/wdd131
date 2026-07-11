@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const menuButton = document.querySelector("#menu");
     const navigationList = document.querySelector(".navigation");
 
@@ -11,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentYearSpan = document.querySelector("#currentyear");
     const lastModifiedParagraph = document.querySelector("#lastModified");
 
-    const currentYear = new Date().getFullYear();
-    currentYearSpan.textContent = currentYear;
-
+    currentYearSpan.textContent = new Date().getFullYear();
     lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
 });
