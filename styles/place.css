@@ -1,9 +1,9 @@
 :root {
     --primary-color: #002395;   
-    --accent-color: #d21034; 
-    --gold-color: #ffb612;     
-    --text-color: #222222;
-    --card-bg: rgba(255, 255, 255, 0.92);
+    --accent-color: #d21034;    
+    --gold-color: #ffb612;      
+    --text-color: #222222;      
+    --card-bg: #ffffff;         
     --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -16,13 +16,13 @@
 body {
     font-family: var(--font-stack);
     color: var(--text-color);
-    background-color: #f7f9fb;
+    background-color: #f7f9fb; 
     line-height: 1.5;
 }
 
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;           
     text-align: center;
     padding: 1.5rem;
     border-bottom: 4px solid var(--gold-color);
@@ -32,7 +32,6 @@ h1 {
     font-size: 2rem;
     letter-spacing: 1px;
 }
-
 
 .hero-container {
     display: flex;
@@ -49,18 +48,18 @@ h1 {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--card-bg);
     margin: 1rem;
     padding: 1.5rem;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px #0000001a; 
     border-left: 5px solid var(--accent-color);
 }
 
 .card h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dddddd; 
     padding-bottom: 0.25rem;
 }
 
@@ -83,7 +82,7 @@ h1 {
 
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;            
     text-align: center;
     padding: 1.25rem;
     margin-top: 2rem;
@@ -100,7 +99,6 @@ footer p {
         max-height: 500px;
     }
 
-
     .hero-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -111,6 +109,7 @@ footer p {
         grid-column: 1 / -1;
     }
 }
+
 
 @media (min-width: 1000px) {
     .hero-container {
@@ -134,7 +133,7 @@ footer p {
         z-index: 2;
         width: 320px;
         background-color: var(--card-bg);
-        backdrop-filter: blur(4px);
+        opacity: 0.95;          
         margin: 0;
     }
 
