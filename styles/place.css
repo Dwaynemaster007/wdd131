@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #002395;   /* Royal Blue Hex */
+    --accent-color: #d21034;    /* Crimson Red Hex */
+    --gold-color: #ffb612;      /* Golden Yellow Hex */
+    --text-color: #222222;      /* Charcoal Hex */
+    --card-bg: #ffffff;         /* White Hex */
+    --body-bg: #f7f9fb;         /* Light Blue-Gray Hex */
+    --border-color: #dddddd;    /* Light Gray Hex */
+    --shadow-color: #0000001a;  /* Hex Alpha for subtle shadow */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
