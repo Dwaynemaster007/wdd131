@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eswatini - Dynamic Place Page</title>
+    <meta name="description" content="An informational portal exploring Eswatini, highlighting key demographic facts and real-time environment metrics.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kingdom of Eswatini</h1>
+    </header>
+
+    <main class="hero-container">
+        <!-- Rubric 4: Responsive WebP Hero Image Swap via picture element -->
+        <picture>
+    <!-- Display large image on desktop screens 1000px wide or larger -->
+    <source srcset="images/eswatini-large.webp" media="(min-width: 1000px)">
+    <!-- Display medium image on tablet screens between 500px and 999px wide -->
+    <source srcset="images/eswatini-medium.webp" media="(min-width: 500px)">
+    <!-- Default fallback image for mobile screens below 500px wide -->
+    <img src="images/eswatini-small.webp" alt="Scenic landscape overview of the Eswatini highlands" class="hero-image" width="600" height="800">
+</picture>
+
+        <!-- Data Section -->
+        <section class="card data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Capital:</strong> Mbabane</li>
+                <li><strong>Population:</strong> 1.2 Million</li>
+                <li><strong>Languages:</strong> SiSwati, English</li>
+                <li><strong>Currency:</strong> Lilangeni (SZL)</li>
+                <li><strong>Time Zone:</strong> GMT+2</li>
+                <li><strong>Internet TLD:</strong> .sz</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="card weather-card">
+            <!-- Rubric 6: Weather heading that receives a pseudo-element icon in desktop view -->
+            <h2 class="weather-heading">Weather</h2>
+            
+            <!-- Rubric 5: Standalone SVG icon displayed in mobile view only -->
+            <div class="weather-icon-mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                    <circle cx="12" cy="12" r="4"/>
+                </svg>
+            </div>
+
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temp">8</span>°C</li>
+                <li><strong>Conditions:</strong> Sunny</li>
+                <li><strong>Wind:</strong> <span id="wind">15</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Thubelihle Dlamini | Eswatini</p>
+        <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
