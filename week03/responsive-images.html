@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03 Learning Activity: Responsive Images</title>
+    <meta name="description" content="Demonstrating responsive image configurations using the HTML5 picture element and art direction principles to optimize page performance.">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <main>
+        <h1>Responsive Image Gallery</h1>
+        <div class="hero">
+            <picture>
+                <!-- Display large image on screens 1000px wide or larger -->
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <!-- Display medium image on screens between 500px and 999px wide -->
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <!-- Default fallback image for mobile screens below 500px wide -->
+                <img src="images/hero-small.webp" alt="Beautiful landscape view of the chosen temple architecture" width="500" height="250" loading="lazy">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>
