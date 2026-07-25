@@ -76,7 +76,7 @@ const temples = [
 ];
 
 // ---------------------------------------------------------
-// Rendering
+// DOM references
 // ---------------------------------------------------------
 const gallery = document.getElementById("gallery");
 const galleryHeading = document.getElementById("gallery-heading");
@@ -84,10 +84,20 @@ const navLinks = document.querySelectorAll(".navigation a");
 const menuButton = document.getElementById("menu");
 const primaryNav = document.getElementById("primary-nav");
 
+// ---------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------
 function formatArea(area) {
   return area.toLocaleString("en-US");
 }
 
+function getDedicatedYear(temple) {
+  return parseInt(temple.dedicated.split(",")[0].trim(), 10);
+}
+
+// ---------------------------------------------------------
+// Rendering
+// ---------------------------------------------------------
 function createTempleCard(temple) {
   const card = document.createElement("article");
   card.className = "temple-card";
@@ -106,8 +116,9 @@ function createTempleCard(temple) {
 
   const img = document.createElement("img");
   img.src = temple.imageUrl;
-  img.alt = temple.templeName;
+  img.alt = `${temple.templeName} Temple`;
   img.loading = "lazy";
+  img.decoding = "async";
   img.width = 400;
   img.height = 250;
 
@@ -125,10 +136,6 @@ function renderTemples(list) {
 // ---------------------------------------------------------
 // Filtering
 // ---------------------------------------------------------
-function getDedicatedYear(temple) {
-  return parseInt(temple.dedicated.split(",")[0].trim(), 10);
-}
-
 const filters = {
   home: () => temples,
   old: () => temples.filter((t) => getDedicatedYear(t) < 1900),
@@ -161,6 +168,9 @@ function applyFilter(filterName) {
   });
 }
 
+// ---------------------------------------------------------
+// Event listeners
+// ---------------------------------------------------------
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -169,9 +179,6 @@ navLinks.forEach((link) => {
   });
 });
 
-// ---------------------------------------------------------
-// Mobile menu toggle
-// ---------------------------------------------------------
 function closeMenu() {
   primaryNav.classList.remove("open");
   menuButton.setAttribute("aria-expanded", "false");

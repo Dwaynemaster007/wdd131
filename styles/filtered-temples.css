@@ -96,6 +96,7 @@ header {
   background: transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .menu-toggle::before,
@@ -108,6 +109,12 @@ header {
   height: 3px;
   background-color: var(--cream);
   border-radius: 2px;
+  display: block;
+}
+
+.menu-toggle span {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .menu-toggle::before {
