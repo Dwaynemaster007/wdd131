@@ -22,8 +22,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.001ms !important;
-    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms;
+    transition-duration: 0.001ms;
   }
 }
 
@@ -136,6 +136,7 @@ nav#primary-nav.open {
   max-height: 300px;
 }
 
+/* Flexbox on nav's immediate child */
 .navigation {
   list-style: none;
   margin: 0;
@@ -151,6 +152,13 @@ nav#primary-nav.open {
   color: var(--cream);
   font-weight: 500;
   border-bottom: 1px solid rgba(246, 243, 236, 0.12);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+/* Hover effect on navigation links */
+.navigation li a:hover {
+  color: var(--gold-soft);
+  background-color: rgba(168, 132, 47, 0.15);
 }
 
 .navigation li a.active {
@@ -183,6 +191,11 @@ nav#primary-nav.open {
     border-bottom: none;
     padding: 0.25rem 0.1rem;
     position: relative;
+  }
+
+  .navigation li a:hover {
+    background-color: transparent;
+    color: var(--gold-soft);
   }
 
   .navigation li a.active::after {
@@ -254,6 +267,12 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(28, 25, 20, 0.15);
 }
 
 .temple-name {
