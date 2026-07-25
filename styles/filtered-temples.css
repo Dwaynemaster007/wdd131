@@ -1,0 +1,312 @@
+/* ===========================================================
+   Tokens
+   =========================================================== */
+:root {
+  --stone: #ece7dd;
+  --card-bg: #ffffff;
+  --ink: #262320;
+  --ink-soft: #4d4a3f;
+  --twilight: #26374d;
+  --twilight-deep: #1c2937;
+  --gold: #a8842f;
+  --gold-soft: #d8c68f;
+  --cream: #f6f3ec;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius: 10px;
+  --shadow: 0 10px 24px rgba(28, 25, 20, 0.1);
+  --transition: 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ===========================================================
+   Base
+   =========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--stone);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gold);
+  color: var(--twilight-deep);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ===========================================================
+   Header / Navigation
+   =========================================================== */
+header {
+  background-color: var(--twilight-deep);
+  color: var(--cream);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.menu-toggle {
+  position: relative;
+  width: 42px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle::before,
+.menu-toggle::after,
+.menu-toggle span {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 3px;
+  background-color: var(--cream);
+  border-radius: 2px;
+}
+
+.menu-toggle::before {
+  top: 9px;
+}
+
+.menu-toggle::after {
+  bottom: 9px;
+}
+
+nav#primary-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition);
+  background-color: var(--twilight);
+}
+
+nav#primary-nav.open {
+  max-height: 300px;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li a {
+  display: block;
+  padding: 0.65rem 0.25rem;
+  text-decoration: none;
+  color: var(--cream);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(246, 243, 236, 0.12);
+}
+
+.navigation li a.active {
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  nav#primary-nav {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .header-bar {
+    padding: 1.1rem 2rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.75rem;
+    padding: 0 2rem 1rem;
+  }
+
+  .navigation li a {
+    border-bottom: none;
+    padding: 0.25rem 0.1rem;
+    position: relative;
+  }
+
+  .navigation li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background-color: var(--gold);
+  }
+}
+
+/* ===========================================================
+   Main
+   =========================================================== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0 0 0.25rem;
+}
+
+.intro {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 0 2rem;
+}
+
+.gallery-heading {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--twilight);
+  border-bottom: 2px solid var(--gold-soft);
+  padding-bottom: 0.4rem;
+  margin: 0 0 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 950px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===========================================================
+   Temple card
+   =========================================================== */
+.temple-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.temple-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1.25rem 1rem 0.35rem;
+}
+
+.temple-name::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  background-color: var(--gold);
+  margin: 0.5rem auto 0;
+}
+
+.temple-details {
+  list-style: none;
+  margin: 0.5rem 0 1.25rem;
+  padding: 0 1.25rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.temple-details li {
+  margin-bottom: 0.25rem;
+}
+
+.detail-label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--twilight);
+  margin-right: 0.35rem;
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 2.5;
+  object-fit: cover;
+  display: block;
+  margin-top: auto;
+}
+
+/* ===========================================================
+   Footer
+   =========================================================== */
+footer {
+  background-color: var(--twilight-deep);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}

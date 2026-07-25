@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album - WDD 131</title>
+    <meta name="description" content="A responsive, filterable temple picture album showcasing temples of The Church of Jesus Christ of Latter-day Saints, sortable by age and size.">
+    <meta name="author" content="Thubelihle Lindani Dlamini">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+        <div class="header-bar">
+            <span class="site-title">Temple Album</span>
+            <button id="menu" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></button>
+        </div>
+        <nav id="primary-nav" aria-label="Temple filters">
+            <ul class="navigation">
+                <li><a href="#" class="active" data-filter="home" aria-current="page">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Temple Album</h1>
+        <p class="intro">Browse temples of The Church of Jesus Christ of Latter-day Saints. Use the menu above to filter the collection by age or size.</p>
+        <h2 id="gallery-heading" class="gallery-heading">Home</h2>
+        <div class="gallery-grid" id="gallery" aria-labelledby="gallery-heading">
+            <!-- Temple cards are generated dynamically by scripts/filtered-temples.js -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🧑🏻‍💻 Thubelihle Lindani Dlamini 🧑🏻‍💻 Eswatini</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
