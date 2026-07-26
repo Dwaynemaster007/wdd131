@@ -28,13 +28,6 @@
   --transition: 0.2s ease;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms;
-    transition-duration: 0.001ms;
-  }
-}
-
 /* ===========================================================
    Base
    =========================================================== */
@@ -44,9 +37,9 @@
 
 body {
   margin: 0;
-  font-family: var(--font-body);
-  background-color: var(--stone);
-  color: var(--ink);
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #ece7dd;
+  color: #262320;
   line-height: 1.5;
 }
 
@@ -54,8 +47,8 @@ body {
   position: absolute;
   left: -999px;
   top: 0;
-  background: var(--gold);
-  color: var(--twilight-deep);
+  background-color: #a8842f;
+  color: #1c2937;
   padding: 0.6rem 1rem;
   font-weight: 600;
   z-index: 100;
@@ -70,17 +63,12 @@ a {
   color: inherit;
 }
 
-:focus-visible {
-  outline: 3px solid var(--gold);
-  outline-offset: 2px;
-}
-
 /* ===========================================================
    Header / Navigation
    =========================================================== */
 header {
-  background-color: var(--twilight-deep);
-  color: var(--cream);
+  background-color: #1c2937;
+  color: #f6f3ec;
 }
 
 .header-bar {
@@ -91,7 +79,7 @@ header {
 }
 
 .site-title {
-  font-family: var(--font-display);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: 0.02em;
@@ -101,7 +89,7 @@ header {
   position: relative;
   width: 42px;
   height: 36px;
-  background: var(--transparent);
+  background-color: #1c2937;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -115,7 +103,7 @@ header {
   left: 8px;
   right: 8px;
   height: 3px;
-  background-color: var(--cream);
+  background-color: #f6f3ec;
   border-radius: 2px;
   display: block;
 }
@@ -136,8 +124,8 @@ header {
 nav#primary-nav {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition);
-  background-color: var(--twilight);
+  transition: max-height 0.2s ease;
+  background-color: #26374d;
 }
 
 nav#primary-nav.open {
@@ -157,20 +145,20 @@ nav#primary-nav.open {
   display: block;
   padding: 0.65rem 0.25rem;
   text-decoration: none;
-  color: var(--cream);
+  color: #f6f3ec;
   font-weight: 500;
-  border-bottom: 1px solid var(--border-soft);
-  transition: color var(--transition), background-color var(--transition);
+  border-bottom: 1px solid #3a4a63;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 /* Hover effect on navigation links */
 .navigation li a:hover {
-  color: var(--gold-soft);
-  background-color: var(--hover-tint);
+  color: #d8c68f;
+  background-color: #2f4260;
 }
 
 .navigation li a.active {
-  color: var(--gold-soft);
+  color: #d8c68f;
   font-weight: 600;
 }
 
@@ -202,8 +190,8 @@ nav#primary-nav.open {
   }
 
   .navigation li a:hover {
-    background-color: var(--transparent);
-    color: var(--gold-soft);
+    background-color: #1c2937;
+    color: #d8c68f;
   }
 
   .navigation li a.active::after {
@@ -213,7 +201,7 @@ nav#primary-nav.open {
     right: 0;
     bottom: -4px;
     height: 2px;
-    background-color: var(--gold);
+    background-color: #a8842f;
   }
 }
 
@@ -227,22 +215,23 @@ main {
 }
 
 h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.5rem;
   margin: 0 0 0.25rem;
+  color: #262320;
 }
 
 .intro {
-  color: var(--ink-soft);
+  color: #4d4a3f;
   max-width: 60ch;
   margin: 0 0 2rem;
 }
 
 .gallery-heading {
-  font-family: var(--font-display);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.4rem;
-  color: var(--twilight);
-  border-bottom: 2px solid var(--gold-soft);
+  color: #26374d;
+  border-bottom: 2px solid #d8c68f;
   padding-bottom: 0.4rem;
   margin: 0 0 1.5rem;
 }
@@ -269,25 +258,26 @@ h1 {
    Temple card
    =========================================================== */
 .temple-card {
-  background-color: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px #d5d1c7;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .temple-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 14px 28px #c9c4b8;
 }
 
 .temple-name {
-  font-family: var(--font-display);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.5rem;
   text-align: center;
   margin: 1.25rem 1rem 0.35rem;
+  color: #262320;
 }
 
 .temple-name::after {
@@ -295,7 +285,7 @@ h1 {
   display: block;
   width: 46px;
   height: 2px;
-  background-color: var(--gold);
+  background-color: #a8842f;
   margin: 0.5rem auto 0;
 }
 
@@ -304,7 +294,7 @@ h1 {
   margin: 0.5rem 0 1.25rem;
   padding: 0 1.25rem;
   text-align: center;
-  color: var(--ink-soft);
+  color: #4d4a3f;
   font-size: 0.95rem;
 }
 
@@ -317,7 +307,7 @@ h1 {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--twilight);
+  color: #26374d;
   margin-right: 0.35rem;
 }
 
@@ -334,8 +324,8 @@ h1 {
    Footer
    =========================================================== */
 footer {
-  background-color: var(--twilight-deep);
-  color: var(--cream);
+  background-color: #1c2937;
+  color: #f6f3ec;
   text-align: center;
   padding: 1.25rem 1rem;
   font-size: 0.9rem;
