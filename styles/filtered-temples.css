@@ -39,8 +39,8 @@ body {
   position: absolute;
   left: -999px;
   top: 0;
-  background-color: #a8842f;
-  color: #1c2937;
+  background-color: #1c2937;   /* was #a8842f */
+  color: #f6f3ec;              /* was #1c2937 */
   padding: 0.6rem 1rem;
   font-weight: 600;
   z-index: 100;
