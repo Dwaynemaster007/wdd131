@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan | The First Paycheck</title>
+  <meta name="description" content="Website planning document for The First Paycheck, a personal finance basics site for young professionals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand">The First Paycheck</p>
+    <p>Website Planning Document &mdash; WDD 131</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="site-name-heading">
+      <h2 id="site-name-heading">Site Name</h2>
+      <p><strong>The First Paycheck</strong></p>
+      <p>The name speaks directly to the audience: people who have just started earning a real income and are figuring out what to do with it for the first time. It is specific and memorable rather than a generic term like &ldquo;finance tips,&rdquo; and it signals the exact life stage the content is written for.</p>
+      <p>Optional domain availability: <code>firstpaycheck.co</code></p>
+    </section>
+
+    <section aria-labelledby="site-purpose-heading">
+      <h2 id="site-purpose-heading">Site Purpose</h2>
+      <p>The site provides practical, jargon-free guidance on budgeting, saving, and debt for early-career professionals, along with an interactive budget calculator that turns a visitor's own income and expenses into a plan they can act on immediately.</p>
+    </section>
+
+    <section aria-labelledby="scenarios-heading">
+      <h2 id="scenarios-heading">Scenarios</h2>
+      <ul class="scenario-list">
+        <li>I just got my first full paycheck and don&rsquo;t know where to start &mdash; how do I build a budget that actually holds up?</li>
+        <li>My friends keep talking about &ldquo;good debt&rdquo; versus &ldquo;bad debt&rdquo; &mdash; what does that actually mean for me?</li>
+        <li>How much of my paycheck should go toward savings before I even think about investing?</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="color-heading">
+      <h2 id="color-heading">Color Schema</h2>
+      <p>The palette borrows from the look of a paper ledger: a warm, neutral background with ink-dark headings, so the site feels grounded and trustworthy rather than like a flashy banking app.</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="chip" style="background:#1b2a4a;"></div>
+          <p class="label">#1B2A4A &mdash; Ink Navy<br>headings, header/footer background</p>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#fbf7f0;"></div>
+          <p class="label">#FBF7F0 &mdash; Ledger Cream<br>page background</p>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#c08a2e;"></div>
+          <p class="label">#C08A2E &mdash; Amber Gold<br>buttons, section dividers, hover states</p>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#3b6e5e;"></div>
+          <p class="label">#3B6E5E &mdash; Ledger Green<br>links, calculator accents, focus outlines</p>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#2b2b2b;"></div>
+          <p class="label">#2B2B2B &mdash; Charcoal<br>body text</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="type-heading">
+      <h2 id="type-heading">Typography</h2>
+      <p>Three fonts, each with one clear job: a serif for character in headings, a clean sans for readable body copy, and a monospace face for numbers, since a finance site lives or dies on how trustworthy its figures look.</p>
+
+      <div class="type-sample display">
+        <p class="role">Fraunces &mdash; headings</p>
+        <p>Build a budget that survives payday week two.</p>
+      </div>
+      <div class="type-sample body">
+        <p class="role">Inter &mdash; body text, navigation, buttons</p>
+        <p>Most budgets fail in the first month, not because the plan is wrong, but because it never accounted for the ordinary, boring expenses that show up every week.</p>
+      </div>
+      <div class="type-sample mono">
+        <p class="role">IBM Plex Mono &mdash; calculator output, dollar amounts, data</p>
+        <p>Monthly leftover: $184.50</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="wireframe-heading">
+      <h2 id="wireframe-heading">Wireframes</h2>
+      <p>Home page layout for mobile and desktop viewports.</p>
+      <div class="wireframes">
+        <figure id="mobile-wire">
+          <img src="images/wireframe-mobile.svg" alt="Mobile wireframe showing a stacked single-column layout with a logo bar, hero block, three content sections, and a footer.">
+          <figcaption>Mobile (portrait)</figcaption>
+        </figure>
+        <figure id="desktop-wire">
+          <img src="images/wireframe-desktop.svg" alt="Desktop wireframe showing a header with horizontal navigation, a two-column hero with a calculator preview, a three-column content grid, and a footer.">
+          <figcaption>Desktop (wide viewport)</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>The First Paycheck &mdash; WDD 131 Website Planning Document</p>
+  </footer>
+</body>
+</html>
