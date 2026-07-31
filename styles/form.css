@@ -1,0 +1,305 @@
+/* Color reference (used consistently throughout this file):
+   #123c39 - Deep Teal   - header/footer background, focus outlines
+   #f7f4ef - Warm White  - page background
+   #ffffff - Card White  - form/card background
+   #16201c - Near-black  - headings
+   #2b2b28 - Charcoal    - body/label text
+   #5c5c56 - Warm Gray   - hint/muted text
+   #b5502f - Rust        - buttons, star fill, required marks
+   #3f6f63 - Sage Teal   - links, secondary accents
+   #ded7c9 - Sand        - borders, empty stars */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f4ef;
+  color: #2b2b28;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background-color: #123c39;
+  color: #f7f4ef;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+header {
+  background-color: #123c39;
+  color: #f7f4ef;
+  padding: 2rem 1.25rem 1.75rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 2.25rem;
+  margin: 0 0 0.4rem;
+}
+
+header .tagline {
+  margin: 0;
+  color: #d6e4e0;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+/* ===========================================================
+   Form Card
+   =========================================================== */
+.review-form {
+  background-color: #ffffff;
+  border: 1px solid #ded7c9;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem 2rem;
+}
+
+.required-note {
+  margin: 0 0 1.5rem;
+  font-size: 0.85rem;
+  color: #5c5c56;
+}
+
+.required {
+  color: #b5502f;
+  font-weight: 700;
+}
+
+.hint {
+  font-weight: 400;
+  color: #5c5c56;
+  font-size: 0.85rem;
+}
+
+.field {
+  margin: 0 0 1.5rem;
+  border: none;
+  padding: 0;
+}
+
+.field:last-of-type {
+  margin-bottom: 0;
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  color: #16201c;
+  margin-bottom: 0.5rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  color: #2b2b28;
+  background-color: #ffffff;
+  border: 1px solid #ded7c9;
+  border-radius: 6px;
+  padding: 0.65rem 0.75rem;
+}
+
+select:focus-visible,
+input[type="date"]:focus-visible,
+input[type="text"]:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #123c39;
+  outline-offset: 1px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+/* ===========================================================
+   Star Rating
+   =========================================================== */
+.rating-group {
+  margin-bottom: 1.5rem;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.stars input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.stars label {
+  font-size: 2.1rem;
+  line-height: 1;
+  color: #ded7c9;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.15s ease;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #b5502f;
+}
+
+.stars input:focus-visible + label {
+  outline: 2px solid #123c39;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===========================================================
+   Checkboxes
+   =========================================================== */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.checkbox-row label {
+  display: inline;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #123c39;
+}
+
+/* ===========================================================
+   Submit Button
+   =========================================================== */
+.submit-btn {
+  display: inline-block;
+  width: 100%;
+  background-color: #b5502f;
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus-visible {
+  background-color: #93401f;
+}
+
+.submit-btn:focus-visible {
+  outline: 2px solid #123c39;
+  outline-offset: 2px;
+}
+
+.link-btn {
+  margin-top: 1.75rem;
+}
+
+/* ===========================================================
+   Confirmation Page
+   =========================================================== */
+.confirmation-card {
+  background-color: #ffffff;
+  border: 1px solid #ded7c9;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem 2rem;
+}
+
+.counter {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.2rem;
+  color: #123c39;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.counter span {
+  font-weight: 700;
+  color: #b5502f;
+}
+
+.summary-list {
+  margin: 0;
+}
+
+.summary-list dt {
+  font-weight: 600;
+  color: #16201c;
+  margin-top: 1rem;
+}
+
+.summary-list dt:first-child {
+  margin-top: 0;
+}
+
+.summary-list dd {
+  margin: 0.25rem 0 0;
+  color: #2b2b28;
+}
+
+/* ===========================================================
+   Footer
+   =========================================================== */
+footer {
+  background-color: #123c39;
+  color: #f7f4ef;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 2.6rem;
+  }
+
+  .review-form,
+  .confirmation-card {
+    padding: 2.25rem 2rem 2.5rem;
+  }
+
+  .stars label {
+    font-size: 2.4rem;
+  }
+}

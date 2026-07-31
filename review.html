@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted - WDD 131</title>
+  <meta name="description" content="Confirmation page shown after successfully submitting a product review, including a running count of total reviews submitted.">
+  <meta name="author" content="Thubelihle Lindani Dlamini">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+
+  <script src="scripts/products-data.js" defer></script>
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <h1>Thank You</h1>
+    <p class="tagline">Your review has been received.</p>
+  </header>
+
+  <main id="main-content">
+    <section class="confirmation-card">
+      <p class="counter">You are reviewer number <span id="reviewCount">&mdash;</span></p>
+
+      <dl class="summary-list">
+        <dt>Product</dt>
+        <dd id="productOut">&mdash;</dd>
+
+        <dt>Overall Rating</dt>
+        <dd id="ratingOut">&mdash;</dd>
+
+        <dt>Date of Installation</dt>
+        <dd id="dateOut">&mdash;</dd>
+
+        <dt>Useful Features</dt>
+        <dd id="featuresOut">&mdash;</dd>
+
+        <dt>Written Review</dt>
+        <dd id="reviewOut">&mdash;</dd>
+
+        <dt>Submitted By</dt>
+        <dd id="nameOut">&mdash;</dd>
+      </dl>
+
+      <a class="submit-btn link-btn" href="form.html">Submit Another Review</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🧑🏻‍💻 Thubelihle Lindani Dlamini 🧑🏻‍💻 Eswatini</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

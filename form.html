@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form - WDD 131</title>
+  <meta name="description" content="Submit a product review, including a star rating, installation date, and useful features, for one of our featured products.">
+  <meta name="author" content="Thubelihle Lindani Dlamini">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+
+  <script src="scripts/products-data.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <h1>Product Review</h1>
+    <p class="tagline">Tell us what you thought of your recent purchase.</p>
+  </header>
+
+  <main id="main-content">
+    <form class="review-form" action="review.html" method="get">
+      <p class="required-note"><span class="required" aria-hidden="true">*</span> indicates a required field</p>
+
+      <div class="field">
+        <label for="product">Product Name <span class="required" aria-hidden="true">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </div>
+
+      <fieldset class="field rating-group">
+        <legend>Overall Rating <span class="required" aria-hidden="true">*</span></legend>
+        <div class="stars">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5" aria-label="5 stars">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4" required>
+          <label for="star4" aria-label="4 stars">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3" required>
+          <label for="star3" aria-label="3 stars">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2" required>
+          <label for="star2" aria-label="2 stars">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1" required>
+          <label for="star1" aria-label="1 star">&#9733;</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="installDate">Date of Installation <span class="required" aria-hidden="true">*</span></label>
+        <input type="date" id="installDate" name="installDate" required>
+      </div>
+
+      <fieldset class="field">
+        <legend>Which features did you find useful? <span class="hint">(check all that apply)</span></legend>
+        <div class="checkbox-row">
+          <input type="checkbox" id="durability" name="features" value="durability">
+          <label for="durability">Durability</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="easeOfUse" name="features" value="ease of use">
+          <label for="easeOfUse">Ease of Use</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="performance" name="features" value="performance">
+          <label for="performance">Performance</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="design" name="features" value="design">
+          <label for="design">Design</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="review">Written Review <span class="hint">(optional)</span></label>
+        <textarea id="review" name="review" rows="5"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="username">Your Name <span class="hint">(optional)</span></label>
+        <input type="text" id="username" name="username">
+      </div>
+
+      <input class="submit-btn" type="submit" value="Post Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🧑🏻‍💻 Thubelihle Lindani Dlamini 🧑🏻‍💻 Eswatini</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
