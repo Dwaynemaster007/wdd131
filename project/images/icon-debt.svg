@@ -1,0 +1,9 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="iconDebtTitle">
+  <title id="iconDebtTitle">Balance scale icon representing weighing good and bad debt</title>
+  <line x1="32" y1="10" x2="32" y2="48" stroke="#1b2a4a" stroke-width="3"/>
+  <line x1="12" y1="20" x2="52" y2="20" stroke="#1b2a4a" stroke-width="3"/>
+  <path d="M12 20 L4 34 A10 6 0 0 0 20 34 Z" fill="#ffffff" stroke="#1b2a4a" stroke-width="2.5"/>
+  <path d="M52 20 L44 34 A10 6 0 0 0 60 34 Z" fill="#c08a2e" stroke="#1b2a4a" stroke-width="2.5"/>
+  <rect x="24" y="48" width="16" height="6" rx="2" fill="#3b6e5e"/>
+  <circle cx="32" cy="10" r="3" fill="#1b2a4a"/>
+</svg>

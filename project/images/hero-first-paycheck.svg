@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Illustration of a paycheck stub with a rising savings line and coins</title>
+  <rect x="0" y="0" width="400" height="320" fill="none"/>
+
+  <!-- paycheck stub -->
+  <rect x="60" y="40" width="280" height="180" rx="14" fill="#ffffff" stroke="#1b2a4a" stroke-width="3"/>
+  <line x1="90" y1="80" x2="230" y2="80" stroke="#d8d0c0" stroke-width="6" stroke-linecap="round"/>
+  <line x1="90" y1="104" x2="200" y2="104" stroke="#d8d0c0" stroke-width="6" stroke-linecap="round"/>
+  <line x1="90" y1="128" x2="260" y2="128" stroke="#d8d0c0" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- rising savings line -->
+  <polyline points="90,190 150,170 200,180 250,140 310,110" fill="none" stroke="#3b6e5e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="310" cy="110" r="6" fill="#3b6e5e"/>
+
+  <!-- perforation -->
+  <line x1="60" y1="220" x2="340" y2="220" stroke="#d8d0c0" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- coins -->
+  <circle cx="95" cy="255" r="26" fill="#c08a2e" stroke="#1b2a4a" stroke-width="3"/>
+  <text x="95" y="263" font-family="Georgia, serif" font-size="24" fill="#1b2a4a" text-anchor="middle">$</text>
+
+  <circle cx="150" cy="270" r="20" fill="#d8c68f" stroke="#1b2a4a" stroke-width="3"/>
+  <text x="150" y="277" font-family="Georgia, serif" font-size="18" fill="#1b2a4a" text-anchor="middle">$</text>
+</svg>

@@ -1,0 +1,500 @@
+/* Color reference (flat hex values used throughout, no CSS variables):
+   #1b2a4a - Ink Navy    - headings, header/footer background, nav
+   #fbf7f0 - Ledger Cream - page background
+   #ffffff - Card White   - card/panel background
+   #c08a2e - Amber Gold   - buttons, active states, accent underlines
+   #3b6e5e - Ledger Green - links, positive amounts, focus outlines
+   #b3423a - Rust Red     - warnings, over-budget states
+   #2b2b2b - Charcoal     - body text
+   #d8d0c0 - hairline dividers on cream */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fbf7f0;
+  color: #2b2b2b;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background-color: #1b2a4a;
+  color: #fbf7f0;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+a {
+  color: #3b6e5e;
+}
+
+a:hover,
+a:focus-visible {
+  color: #c08a2e;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  color: #1b2a4a;
+  line-height: 1.2;
+}
+
+/* ===========================================================
+   Header / Navigation
+   =========================================================== */
+header.site-header {
+  background-color: #1b2a4a;
+  color: #fbf7f0;
+}
+
+.header-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.brand {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #fbf7f0;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  position: relative;
+  width: 40px;
+  height: 34px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle::before,
+.menu-toggle::after,
+.menu-toggle span {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  background-color: #fbf7f0;
+  border-radius: 2px;
+  display: block;
+}
+
+.menu-toggle span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-toggle::before {
+  top: 8px;
+}
+
+.menu-toggle::after {
+  bottom: 8px;
+}
+
+nav#primary-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  background-color: #223a5e;
+}
+
+nav#primary-nav.open {
+  max-height: 240px;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li a {
+  display: block;
+  padding: 0.65rem 0.25rem;
+  text-decoration: none;
+  color: #fbf7f0;
+  font-weight: 500;
+  border-bottom: 1px solid #33507a;
+}
+
+.navigation li a:hover {
+  color: #d8c68f;
+}
+
+.navigation li a.active {
+  color: #c08a2e;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  nav#primary-nav {
+    max-height: none;
+    overflow: visible;
+    background-color: transparent;
+  }
+
+  .header-bar {
+    padding: 1.1rem 2rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 1.75rem;
+    padding: 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .navigation li a {
+    border-bottom: none;
+    padding: 0.25rem 0.1rem;
+    position: relative;
+  }
+
+  .navigation li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: #c08a2e;
+  }
+}
+
+/* ===========================================================
+   Layout
+   =========================================================== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #d8d0c0;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+.section-heading {
+  font-size: 1.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.section-lede {
+  color: #4d4a3f;
+  max-width: 60ch;
+  margin: 0 0 2rem;
+}
+
+/* ===========================================================
+   Hero
+   =========================================================== */
+.hero {
+  padding: 3rem 0 2.5rem;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.hero p {
+  max-width: 55ch;
+  color: #4d4a3f;
+  margin: 0 0 1.5rem;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c08a2e;
+  color: #1b2a4a;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: #a8752a;
+  color: #fbf7f0;
+}
+
+/* ===========================================================
+   Feature Cards
+   =========================================================== */
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 650px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #d8d0c0;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  color: #4d4a3f;
+  margin: 0;
+}
+
+/* ===========================================================
+   Basics page content blocks
+   =========================================================== */
+.topic-block {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 750px) {
+  .topic-block {
+    grid-template-columns: 90px 1fr;
+  }
+}
+
+.topic-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.topic-block h3 {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.topic-block p {
+  margin: 0 0 0.75rem;
+  max-width: 65ch;
+}
+
+.topic-block ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.topic-block li {
+  margin-bottom: 0.4rem;
+}
+
+/* ===========================================================
+   Calculator
+   =========================================================== */
+.calculator-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 850px) {
+  .calculator-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.calc-form {
+  background-color: #ffffff;
+  border: 1px solid #d8d0c0;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+}
+
+.calc-form .field {
+  margin-bottom: 1.1rem;
+}
+
+.calc-form label {
+  display: block;
+  font-weight: 600;
+  color: #1b2a4a;
+  margin-bottom: 0.35rem;
+}
+
+.calc-form input[type="number"] {
+  width: 100%;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 1rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #d8d0c0;
+  border-radius: 6px;
+}
+
+.calc-form input:focus-visible {
+  outline: 2px solid #1b2a4a;
+  outline-offset: 1px;
+}
+
+.calc-result {
+  background-color: #ffffff;
+  border: 1px solid #d8d0c0;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+}
+
+.calc-result h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.result-figure {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.result-figure.positive {
+  color: #3b6e5e;
+}
+
+.result-figure.negative {
+  color: #b3423a;
+}
+
+.result-message {
+  margin: 0 0 1.25rem;
+  color: #4d4a3f;
+}
+
+.breakdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breakdown-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #d8d0c0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.95rem;
+}
+
+.breakdown-list li:last-child {
+  border-bottom: none;
+}
+
+.calc-meta {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #4d4a3f;
+}
+
+/* ===========================================================
+   References page
+   =========================================================== */
+.reference-list {
+  padding-left: 1.25rem;
+}
+
+.reference-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* ===========================================================
+   Footer
+   =========================================================== */
+footer.site-footer {
+  background-color: #1b2a4a;
+  color: #fbf7f0;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer.site-footer p {
+  margin: 0.25rem 0;
+}
+
+footer.site-footer a {
+  color: #d8c68f;
+}

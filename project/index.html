@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First Paycheck | Personal Finance Basics for Young Professionals</title>
+  <meta name="description" content="The First Paycheck helps young professionals build a first budget, start saving, and understand debt, with a free interactive budget calculator.">
+  <meta name="author" content="Thubelihle Lindani Dlamini">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="brand" href="index.html">The First Paycheck</a>
+      <button id="menu" class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+      </button>
+    </div>
+    <nav id="primary-nav" aria-label="Primary">
+      <ul class="navigation">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div>
+        <h1>Money guidance for your first real paycheck.</h1>
+        <p>No jargon, no shame about starting late, no assumption you already know how any of this works. The First Paycheck breaks budgeting, saving, and debt down into plain steps, then gives you a calculator that turns your own numbers into a plan.</p>
+        <a class="btn" href="calculator.html">Try the Budget Calculator</a>
+      </div>
+      <img src="images/hero-first-paycheck.svg" alt="Illustration of a paycheck stub with a rising savings line and coins" width="400" height="320">
+    </section>
+
+    <section aria-labelledby="who-heading">
+      <h2 id="who-heading" class="section-heading">Built for people just starting out</h2>
+      <p class="section-lede">Most personal finance advice is written for people who already have savings, a mortgage, and a 401(k) match to think about. This site is written for the paycheck before all of that — your first one, or one of your first few.</p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/icon-budget.svg" alt="" width="48" height="48" loading="lazy">
+          <h3>A budget that survives contact with real life</h3>
+          <p>Learn a simple way to split your paycheck into needs, wants, and savings, without a spreadsheet you'll abandon by week three.</p>
+        </div>
+        <div class="card">
+          <img src="images/icon-save.svg" alt="" width="48" height="48" loading="lazy">
+          <h3>Saving before it feels urgent</h3>
+          <p>Small, automatic habits that build a cushion before an emergency forces the issue.</p>
+        </div>
+        <div class="card">
+          <img src="images/icon-debt.svg" alt="" width="48" height="48" loading="lazy">
+          <h3>Debt you can actually reason about</h3>
+          <p>A clear way to tell the difference between debt that's working for you and debt that's working against you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="calc-cta-heading">
+      <h2 id="calc-cta-heading" class="section-heading">See where your money actually goes</h2>
+      <p class="section-lede">Enter your income and a few expenses into the calculator and get an honest read on your leftover balance and savings rate &mdash; saved on your device so it's there next time you check in.</p>
+      <a class="btn" href="calculator.html">Open the Calculator</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy;<span id="currentyear"></span> 🧑🏻&zwj;💻 Thubelihle Lindani Dlamini 🧑🏻&zwj;💻 Eswatini</p>
+    <p id="lastModified"></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>
