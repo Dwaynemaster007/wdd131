@@ -52,11 +52,28 @@ function renderBreakdown(budget) {
   const rows = expenseCategories
     .map((category) => {
       const amount = budget[category.key];
-      return `<li><span>${category.label}</span><span>${currency(amount)}</span></li>`;
+      const pct = budget.income > 0 ? Math.min((amount / budget.income) * 100, 100) : 0;
+      return `<li>
+        <div class="breakdown-row"><span>${category.label}</span><span>${currency(amount)}</span></div>
+        <div class="bar-track"><div class="bar-fill" data-pct="${pct}"></div></div>
+      </li>`;
     })
     .join("");
 
   breakdownList.innerHTML = rows;
+
+  /* Animate bars in on the next frame so the width transition actually plays */
+  requestAnimationFrame(() => {
+    breakdownList.querySelectorAll(".bar-fill").forEach((bar) => {
+      bar.style.width = `${bar.dataset.pct}%`;
+    });
+  });
+}
+
+function pulseResult() {
+  resultFigure.classList.remove("pulse");
+  void resultFigure.offsetWidth;
+  resultFigure.classList.add("pulse");
 }
 
 function renderResult(budget) {
@@ -81,6 +98,7 @@ function renderResult(budget) {
     resultMessage.textContent = `You have ${currency(leftover)} left over and a savings rate of ${savingsRate.toFixed(1)}%. That is a solid, sustainable pace.`;
   }
 
+  pulseResult();
   renderBreakdown(budget);
 }
 

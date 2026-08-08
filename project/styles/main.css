@@ -329,6 +329,22 @@ section:last-of-type {
 /* ===========================================================
    Basics page content blocks
    =========================================================== */
+.basics-photo {
+  margin: 2rem 0 0;
+}
+
+.basics-photo img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d8d0c0;
+}
+
+.basics-photo figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #4d4a3f;
+}
+
 .topic-block {
   display: grid;
   gap: 1.5rem;
@@ -493,6 +509,199 @@ footer.site-footer {
 
 footer.site-footer p {
   margin: 0.25rem 0;
+}
+
+/* ===========================================================
+   Newsletter Subscribe (in footer, all pages)
+   =========================================================== */
+.subscribe {
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #33507a;
+}
+
+.subscribe h2 {
+  color: #fbf7f0;
+  font-size: 1.3rem;
+  margin: 0 0 0.35rem;
+}
+
+.subscribe p {
+  color: #cdd6de;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1 1 220px;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #33507a;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+.subscribe-form input[type="email"]:focus-visible {
+  outline: 2px solid #c08a2e;
+  outline-offset: 1px;
+}
+
+.btn-subscribe {
+  background-color: #c08a2e;
+  color: #1b2a4a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus-visible {
+  background-color: #d8c68f;
+}
+
+.subscribe-message {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.subscribe-message.success {
+  color: #9fd3bf;
+}
+
+.subscribe-message.error {
+  color: #e2a79a;
+}
+
+/* ===========================================================
+   Motion: entrances, hover lift, result pulse, bar fills
+   =========================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes resultPulse {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero > div,
+.hero img,
+.card,
+.topic-block {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.hero img {
+  animation-delay: 0.1s;
+}
+
+.card-grid .card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.card-grid .card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px #d5d1c7;
+}
+
+.navigation li a {
+  position: relative;
+}
+
+@media (min-width: 700px) {
+  .navigation li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -6px;
+    height: 2px;
+    background-color: #c08a2e;
+    transition: right 0.2s ease;
+  }
+
+  .navigation li a:hover::before {
+    right: 0;
+  }
+}
+
+.result-figure.pulse {
+  animation: resultPulse 0.35s ease;
+}
+
+.bar-track {
+  background-color: #f0ece1;
+  border-radius: 4px;
+  height: 6px;
+  margin-top: 0.35rem;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #3b6e5e;
+  border-radius: 4px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.breakdown-list li {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.15rem;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero > div,
+  .hero img,
+  .card,
+  .topic-block,
+  .card:hover,
+  .result-figure.pulse,
+  .bar-fill {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
 }
 
 footer.site-footer a {
