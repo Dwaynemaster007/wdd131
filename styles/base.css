@@ -184,3 +184,10 @@ footer p {
     color: #ffff00;
     font-size: 0.95rem;
 }
+.course-work {
+    margin-top: 1.5rem;
+}
+
+.course-work li {
+    margin-bottom: 0.4rem;
+}

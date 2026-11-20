@@ -13,7 +13,17 @@
   <header class="site-header">
     <div class="header-bar">
       <a class="brand" href="index.html">The First Paycheck</a>
+      <button id="menu" class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+      </button>
     </div>
+    <nav id="primary-nav" aria-label="Primary">
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="basics.html">Basics</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main-content">
@@ -32,6 +42,7 @@
 
   <footer class="site-footer">
     <p>&copy;<span id="currentyear"></span> Thubelihle Lindani Dlamini &middot; Eswatini</p>
+    <p><a href="index.html">The First Paycheck home</a> · <a href="../index.html">WDD 131 course home</a></p>
     <p id="lastModified"></p>
   </footer>
 </body>

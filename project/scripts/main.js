@@ -7,7 +7,9 @@ function toggleNav() {
   menuButton.setAttribute("aria-expanded", `${isOpen}`);
 }
 
-menuButton.addEventListener("click", toggleNav);
+if (menuButton && primaryNav) {
+  menuButton.addEventListener("click", toggleNav);
+}
 
 /* ---------- Footer: Year & Last Modified ---------- */
 const yearSpan = document.getElementById("currentyear");
